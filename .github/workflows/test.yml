@@ -1,7 +1,7 @@
 name: Daily HackerNews
 on:
   schedule:
-    - cron: 0 12 * * * # Every day at noon
+    - cron: "*/15 * * * *"
 
 jobs:
   daily_hackernews:
