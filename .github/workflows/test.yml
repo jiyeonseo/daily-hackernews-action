@@ -15,5 +15,6 @@ jobs:
         with:
           chat_id: "1077870607"
           coount: 5
+          telegram_key: ${{ secrets.TELEGRAM_KEY }}
         env:
           TELEGRAM_KEY: ${{ secrets.TELEGRAM_KEY }}
