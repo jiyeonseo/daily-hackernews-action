@@ -19,7 +19,7 @@ jobs:
     steps:
 
     - name: daily-hackernews
-      uses: actions/checkout@v1
+      uses: actions/checkout@v1.0
       with:
         chat_id: "Telegram chat id"
         coount: 5

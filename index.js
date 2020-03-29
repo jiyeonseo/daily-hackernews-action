@@ -25,7 +25,7 @@ async function run() {
   let msg = "";
   const adding_content = obj => {
     temp.push(obj);
-    msg += `[${temp.length}] ${obj.title} \n* link : ${obj.link} \n* see details : https://news.ycombinator.com/item?id=${obj.detail} \n\n`;
+    msg += `[${temp.length}] ${obj.title} \n* link : ${obj.link} \n* see details : ${obj.detail} \n\n`;
 
     if (temp.length == size) {
       try {
