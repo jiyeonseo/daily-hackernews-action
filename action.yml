@@ -1,13 +1,23 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: "Daily Hackernews"
+description: "Getting the top Hackernews through Telegram"
+branding:
+  icon: "book"
+  color: "blue"
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  telegram_key:
+    description: "telegram bot token for sending a message"
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+    default: ""
+  chat_id:
+    # You can check chat ids which are connected with yout bot.
+    # https://api.telegram.org/bot{bot_token}/getUpdates
+    description: "Telegram chat id"
+    required: true
+    default: "1111111111"
+  count:
+    description: "number of top Hackernews stories the user wants to get"
+    required: false
+    default: 5
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"

@@ -1,7 +1,7 @@
 {
-  "name": "javascript-action",
+  "name": "daily-hackernews-action",
   "version": "1.0.0",
-  "description": "JavaScript Action Template",
+  "description": "Github action for daily top 5 hacker news",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
-    "@actions/core": "^1.1.1"
+    "@actions/core": "^1.1.1",
+    "axios": "^0.19.2",
+    "node-telegram-bot-api": "^0.40.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.5",

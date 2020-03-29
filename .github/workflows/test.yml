@@ -1,25 +1,17 @@
-name: "units-test"
+name: Daily HackerNews
 on:
-  pull_request:
-  push:
-    branches:
-      - master
-      - 'releases/*'
+  schedule:
+    - cron: 0 12 * * * # Every day at noon
 
 jobs:
-  # unit tests
-  units:
+  daily_hackernews:
+    name: Daily HackerNews
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: npm ci
-    - run: npm test
-
-  # test action works running from the graph  
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: ./
-      with:
-        milliseconds: 1000
+      - name: daily-hackernews
+        uses: actions/checkout@v1
+        with:
+          chat_id: "1077870607"
+          coount: 5
+        env:
+          TELEGRAM_KEY: ${{ secrets.TELEGRAM_KEY }}
