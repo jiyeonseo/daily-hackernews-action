@@ -3447,7 +3447,14 @@ const token = core.getInput("telegram_key");
 const bot = new TelegramBot(token);
 const chatId = core.getInput("chat_id");
 
-const size = 5;
+const size = core.getInput("count");
+
+if (size > 500) {
+  core.setFailed(
+    "More than 500 stories are not allowed. Set a smaller number of stories count."
+  );
+}
+
 //top stories
 const hackernewsURL =
   "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty";
@@ -3458,9 +3465,7 @@ async function run() {
   let msg = "";
   const adding_content = obj => {
     temp.push(obj);
-    msg += `[${temp.length}] ${obj.title} \n
-                      link : ${obj.link} \n
-                      see details : https://news.ycombinator.com/item?id=${obj.detail} \n\n`;
+    msg += `[${temp.length}] ${obj.title} \n* link : ${obj.link} \n* see details : ${obj.detail} \n\n`;
 
     if (temp.length == size) {
       try {

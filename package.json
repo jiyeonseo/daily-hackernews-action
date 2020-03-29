@@ -1,7 +1,7 @@
 {
   "name": "daily-hackernews-action",
   "version": "1.0.0",
-  "description": "Github action for daily top 5 hacker news",
+  "description": "Github action for daily top hacker news",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
