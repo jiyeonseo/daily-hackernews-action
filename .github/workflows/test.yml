@@ -1,7 +1,7 @@
 name: Daily HackerNews
 on:
   schedule:
-    - cron: 25 2 * * * # Every day at 7am
+    - cron: 40 * * * * # Every day at 7am
   watch:
     types: [started]
 
