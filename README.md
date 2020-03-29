@@ -35,10 +35,7 @@ jobs:
 
 - `chat_id`: Chat id with your bot. You can check chat ids which are connected with the bot at here : [https://api.telegram.org/bot{bot_token}/getUpdates](https://api.telegram.org/bot{bot_token}/getUpdates)
 - `count`: How many top Hackernews stories you want to get daily. (default: 5)
-
-## Environment variables
-
-- `TELEGRAM_KEY` (required): Telegram bot token to access [Telegram API](https://core.telegram.org/api)
+- `telegram_key` : Telegram bot token to access [Telegram API](https://core.telegram.org/api).
 
 ## License
 
