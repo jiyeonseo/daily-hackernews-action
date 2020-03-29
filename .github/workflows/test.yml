@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: daily-hackernews
-        uses: jiyeonseo/daily-hackernews-action@v1
+        uses: jiyeonseo/daily-hackernews-action@v1.0
         with:
           chat_id: "1077870607"
           coount: 5
