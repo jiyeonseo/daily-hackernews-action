@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
-    "@actions/core": "^1.1.1",
+    "@actions/core": "^1.2.6",
     "axios": "^0.19.2",
     "node-telegram-bot-api": "^0.40.0"
   },
